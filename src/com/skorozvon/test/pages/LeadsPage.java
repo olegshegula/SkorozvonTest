@@ -17,7 +17,7 @@ public class LeadsPage extends Page {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(id = "add-entity]")
+	@FindBy(id = "add-entity")
 	private WebElement addentity;	
 	
 	@FindBy(id = "add-contact")
