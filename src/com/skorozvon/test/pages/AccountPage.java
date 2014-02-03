@@ -22,7 +22,7 @@ public class AccountPage extends Page {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(xpath = "//a[text()='Прозвон']")
+	@FindBy(xpath = "//a[@href='#leads']")
 	private WebElement leads;
 
 	/* (non-Javadoc)

@@ -17,7 +17,7 @@ public class LeadsPage extends Page {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(xpath = "//div[@class='button_dropdown']")
+	@FindBy(id = "add-entity]")
 	private WebElement addentity;	
 	
 	@FindBy(id = "add-contact")
@@ -31,7 +31,7 @@ public class LeadsPage extends Page {
 
 	@Override
 	public void open() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	

@@ -68,29 +68,29 @@ public class SelTestCase {
 	 * 
 	 * } }
 	 */
-	/*
-	 * @AfterTest public void tearDown() {
-	 * 
-	 * driver.close(); driver.quit();
-	 * 
-	 * }
-	 */
+
 	@AfterTest
-	public void closeBrowser(ITestResult result) throws IOException {
-
-		if (!result.isSuccess()) {
-			File imageFile = ((TakesScreenshot) driver)
-					.getScreenshotAs(OutputType.FILE);
-			String failureImageFileName = result.getMethod().getMethodName()
-					+ new SimpleDateFormat("MM-dd-yyyy_HH-ss")
-							.format(new GregorianCalendar().getTime());
-			File failureImageFile = new File(failureImageFileName);
-			FileUtils.moveFile(imageFile, failureImageFile);
-
-		}
+	public void tearDown() {
 
 		driver.close();
 		driver.quit();
+
 	}
 
+	/*
+	 * @AfterTest public void closeBrowser(ITestResult result) throws
+	 * IOException {
+	 * 
+	 * if (!result.isSuccess()) { File imageFile = ((TakesScreenshot) driver)
+	 * .getScreenshotAs(OutputType.FILE); String failureImageFileName =
+	 * result.getMethod().getMethodName() + new
+	 * SimpleDateFormat("MM-dd-yyyy_HH-ss") .format(new
+	 * GregorianCalendar().getTime()); File failureImageFile = new
+	 * File(failureImageFileName); FileUtils.moveFile(imageFile,
+	 * failureImageFile);
+	 * 
+	 * }
+	 * 
+	 * driver.close(); driver.quit(); }
+	 */
 }

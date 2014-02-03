@@ -14,12 +14,14 @@ import com.skorozvon.test.data.RegistrationData;
  * @author shcegula-os
  * 
  */
-public class CreateContactPage{
+public class CreateContactPage extends Page {
 
 	private WebDriver driver;
 
 	public CreateContactPage(WebDriver driver) {
-		this.driver = driver;
+		
+		super(driver);
+		//this.driver = driver;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -96,13 +98,13 @@ public class CreateContactPage{
 		return this;
 	}
 
-	public AccountPage clickSave() {
+	public ResultPage clickSave() {
 		savebutton.click();
-		return PageFactory.initElements(driver, AccountPage.class);
+		return PageFactory.initElements(driver, ResultPage.class);
 
 	}
 	
-	public AccountPage createNewContact(RegistrationData registrationData) {
+	public ResultPage createNewContact(RegistrationData registrationData) {
 		return enterName(registrationData.getName())
 				.enterCity(registrationData.getCity())
 				.enterPost(registrationData.getPost())
@@ -111,5 +113,11 @@ public class CreateContactPage{
 				.enterComment(registrationData.getComment())
 				.clickSave();
 
+	}
+
+	@Override
+	public void open() {
+		// TODO Auto-generated method stub
+		
 	}
 }
