@@ -17,10 +17,13 @@ public class LeadsPage extends Page {
 		// TODO Auto-generated constructor stub
 	}
 	
+	@FindBy(xpath = "//div[@class='button_dropdown']")
+	private WebElement addentity;	
+	
 	@FindBy(id = "add-contact")
 	private WebElement addcontact;	
 
-		
+	
 	public boolean isPageOpened() {
 		return addcontact.isDisplayed();
 	}
@@ -34,6 +37,7 @@ public class LeadsPage extends Page {
 	
 	
 	public CreateContactPage addContact(){
+		addentity.click();
 		addcontact.click();
 		return PageFactory.initElements(driver, CreateContactPage.class);
 	}

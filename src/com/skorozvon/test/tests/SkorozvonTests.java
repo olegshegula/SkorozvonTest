@@ -39,10 +39,7 @@ public class SkorozvonTests extends com.skorozvon.test.core.SelTestCase {
 		CreateContactPage createPage = leadsPage.addContact();
 		Assert.assertTrue(createPage.isPageOpened());
 		
-		createPage.createNewContact(registrationData);
-		
-		
-		
+		createPage.createNewContact(registrationData);			
 		
 	}
 	
