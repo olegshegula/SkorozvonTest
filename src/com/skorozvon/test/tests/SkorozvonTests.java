@@ -34,11 +34,13 @@ public class SkorozvonTests extends com.skorozvon.test.core.SelTestCase {
 		Assert.assertTrue(accountPage.isPageOpened());
 		accountPage.clickMenuLeads();
 		
-		LeadsPage leadsPage = PageFactory.initElements(driver, LeadsPage.class);		
-		leadsPage.addContact();
+		LeadsPage leadsPage = PageFactory.initElements(driver, LeadsPage.class);
+		//Assert.assertTrue(leadsPage.isPageOpened());
+		leadsPage.addContact();		
 		
-		
-		//createPage.createNewContact(registrationData);			
+		CreateContactPage ñreatePage = 	PageFactory.initElements(driver, CreateContactPage.class);		
+		ñreatePage.isPageOpened();
+		ñreatePage.createNewContact(registrationData);
 		
 	}
 	

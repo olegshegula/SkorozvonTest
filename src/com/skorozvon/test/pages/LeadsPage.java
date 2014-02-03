@@ -17,10 +17,10 @@ public class LeadsPage extends Page {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(id = "add-entity")
+	@FindBy(xpath = "//span[@class='dropdown-icon']")
 	private WebElement addentity;	
 	
-	@FindBy(id = "add-contact")
+	@FindBy(xpath = "//div[@id='add-contact']")
 	private WebElement addcontact;	
 
 	
